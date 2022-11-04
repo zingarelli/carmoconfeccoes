@@ -8,6 +8,7 @@
     <meta name="description" content="Carmo Calçados Confecções é uma loja de venda de moda infantil localizada em Araraquara/SP. Especializada em roupas e calçados para batizados, festas e ocasiões especiais.">
     <meta name="keywords" content="roupa, batizado, festa, infantil, moda, vestido, times, desenhos, confeccao, confeccoes, araraquara">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Carmo Calçados e Confecções</title>
 </head>
@@ -40,8 +41,29 @@
         <article class="fotos">
             <h2>Veja alguns de nossos produtos</h2>
             <p>Arraste para os lados ou toque nas setas para trocar de foto.</p>
-            <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-            <img src="imagens/fotos/001.jpg" alt="fotos dos produtos da loja Carmo Confecções" class="fotos__img">
+            <!-- Swipper -->
+            <!-- https://swiperjs.com -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imagens/fotos/01.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/02.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/04.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/05.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/06.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/07.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/08.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/09.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/10.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/11.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/12.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/13.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/14.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/15.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <div class="swiper-slide"><img src="imagens/fotos/16.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </article>
 
         <article class="local">
@@ -75,5 +97,17 @@
             </a>
         </p>
     </footer>
+    <!-- Initialize Swiper -->
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            effect: 'fade',
+            grabCursor: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>

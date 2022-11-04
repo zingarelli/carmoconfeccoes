@@ -8,7 +8,7 @@
     --bg-linear-2: #e8dcfa;
     --bg-linear-3: #f3effa;
     --font-color: #9d00ea;
-    --main-font-family: arial,helvetica,serif;
+    --main-font-family: arial, helvetica, serif;
 }
 
 body {
@@ -35,7 +35,7 @@ a {
     text-decoration: none;
 }
 
-main, 
+main,
 footer {
     margin: 2em;
 }
@@ -91,8 +91,17 @@ footer {
 .fotos {
     min-height: 100vh;
 }
-.fotos__img {
+
+.swiper {
     width: 100%;
+    height: 70vh;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
 }
 
 /* --- LOCALIZAÇÃO */
@@ -108,6 +117,6 @@ footer {
     font-size: .9em;
 }
 
-footer > p {
+footer>p {
     margin-bottom: 1em;
 }
