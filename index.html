@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matheus Ricardo Uihara Zingarelli">
-    <meta name="description" content="Carmo Calçados Confecções é uma loja de venda de moda infantil localizada em Araraquara/SP. Especializada em roupas e calçados para batizados, festas e ocasiões especiais.">
-    <meta name="keywords" content="roupa, batizado, festa, infantil, moda, vestido, times, desenhos, confeccao, confeccoes, araraquara">
+    <meta name="description"
+        content="Carmo Calçados Confecções é uma loja de venda de moda infantil localizada em Araraquara/SP. Especializada em roupas e calçados para batizados, festas e ocasiões especiais.">
+    <meta name="keywords"
+        content="roupa, batizado, festa, infantil, moda, vestido, times, desenhos, confeccao, confeccoes, araraquara">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Carmo Calçados e Confecções</title>
 </head>
+
 <body>
     <header>
         <h1 class="header__logo"><img class="header__image" src="imagens/logo.svg" alt="Carmo Confecções"></h1>
@@ -21,7 +25,7 @@
                     <img class="contato__icone" src="imagens/telefone.png" alt="telefone">
                     (16) 3332-2922
                 </a>
-                </span>
+            </span>
             <span class="contato__item">
                 <a href="https://wa.me/5516997262401" target="_blank" class="contato__link">
                     <img class="contato__icone" src="imagens/whatsapp.png" alt="abre o whatsapp em uma nova janela">
@@ -30,14 +34,14 @@
             </span>
         </div>
     </header>
-    <main >
+    <main>
         <article class="descricao">
             <h2>Moda infantil</h2>
             <p>Roupas e calçados para batizados e festas.</p>
             <p>Vestidinhos e terninhos para ocasiões especiais.</p>
             <p>Roupas infantis de times e desenhos.</p>
         </article>
-    
+
         <article class="fotos">
             <h2>Veja alguns de nossos produtos</h2>
             <p>Arraste para os lados ou toque nas setas para trocar de foto.</p>
@@ -49,16 +53,18 @@
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </article>
 
         <article class="local">
-            <h2>Venha nos visitar</h2>        
-            <p>Rua Gonçalves Dias, 373 </p> 
+            <h2>Venha nos visitar</h2>
+            <p>Rua Gonçalves Dias, 373 - Araraquara</p>
             <p>(Rua 1, esquina com a Duque de Caxias)</p>
             <p>Você pode ver nossa localização no mapa.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.6836573538017!2d-48.176022985389885!3d-21.792501004536483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f3e5c415bfe7%3A0x74aeda33dbf14c42!2zQ2FybW8gQ2Fsw6dhZG9zIENvbmZlY8Onw7Vlcw!5e0!3m2!1spt-BR!2sus!4v1667581120248!5m2!1spt-BR!2sus" class="local__mapa" style="border:0;" loading="lazy"></iframe>
-            <div class="mapa"></div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.6836573538017!2d-48.176022985389885!3d-21.792501004536483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f3e5c415bfe7%3A0x74aeda33dbf14c42!2zQ2FybW8gQ2Fsw6dhZG9zIENvbmZlY8Onw7Vlcw!5e0!3m2!1spt-BR!2sus!4v1667581120248!5m2!1spt-BR!2sus"
+                class="local__mapa" style="border:0;" loading="lazy"></iframe>
         </article>
     </main>
     <footer>
@@ -69,7 +75,7 @@
                 <img class="contato__icone" src="imagens/telefone.png" alt="telefone">
                 (16) 3332-2922
             </a>
-            </p>
+        </p>
         <p class="contato__item">
             <a href="https://wa.me/5516997262401" target="_blank" class="contato__link">
                 <img class="contato__icone" src="imagens/whatsapp.png" alt="abre o whatsapp em uma nova janela">
@@ -90,6 +96,11 @@
             effect: 'fade',
             grabCursor: true,
             rewind: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                type: 'bullets'
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -101,9 +112,10 @@
         });
 
         const max = 16;
-        for(let i=1; i<=max; i++){
+        for (let i = 1; i <= max; i++) {
             swiper.appendSlide(`<div class="swiper-slide"><img src="imagens/fotos/${i}.png" alt="fotos dos produtos da loja Carmo Confecções"></div>`);
         }
     </script>
 </body>
+
 </html>
