@@ -7,6 +7,7 @@
     --bg-linear-1: #decbfc;
     --bg-linear-2: #e8dcfa;
     --bg-linear-3: #f3effa;
+    --swiper-bg: #eee4ff;
     --font-color: #9d00ea;
     --main-font-family: arial, helvetica, serif;
 }
@@ -101,7 +102,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 18px;
+    background-image: var(--swiper-bg);
+}
+
+.swiper-slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* --- LOCALIZAÇÃO */
