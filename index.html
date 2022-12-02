@@ -45,21 +45,7 @@
             <!-- https://swiperjs.com -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="imagens/fotos/01.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/02.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/04.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/05.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/06.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/07.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/08.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/09.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/10.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/11.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/12.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/13.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/14.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/15.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
-                    <div class="swiper-slide"><img src="imagens/fotos/16.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>
+                    <!-- content dynamically filled by JS -->
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -100,14 +86,24 @@
     <!-- Initialize Swiper -->
     <script src="swiper/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper('.mySwiper', {
+        const swiper = new Swiper('.mySwiper', {
             effect: 'fade',
             grabCursor: true,
+            rewind: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            a11y: {
+                prevSlideMessage: 'ver foto anterior',
+                nextSlideMessage: 'ir para a próxima foto'
+            }
         });
+
+        const max = 16;
+        for(let i=1; i<=max; i++){
+            swiper.appendSlide(`<div class="swiper-slide"><img src="imagens/fotos/${i}.jpg" alt="fotos dos produtos da loja Carmo Confecções"></div>`);
+        }
     </script>
 </body>
 </html>
