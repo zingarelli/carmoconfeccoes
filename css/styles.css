@@ -102,7 +102,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: var(--swiper-bg);
+    background-color: var(--swiper-bg);
 }
 
 .swiper-slide > img {
