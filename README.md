@@ -8,3 +8,5 @@ Site criado para divulgar a loja de confecção infantil da minha mãe, localiza
 O site já existia, porém, eu o refiz para ficar adaptável a diferentes telas e também deixando o HTML mais semântico. 
 
 Adicionei uma galeria de fotos utilizando o [SwiperJS](swiperjs.com). 
+
+![gif do site na versão para celular](https://user-images.githubusercontent.com/19349339/206710165-64fc6b54-c88b-4933-84c2-ec91b90d1295.gif)
