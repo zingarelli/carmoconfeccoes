@@ -37,3 +37,13 @@ test('one slide never schedules animation and destroy clears timers', () => {
   assert.equal(setup(1).timers.size, 0);
   const h = setup(); h.rotation.destroy(); assert.equal(h.timers.size, 0);
 });
+
+test('manual selection updates the next automatic slide', () => {
+  const h = setup(); h.rotation.select(1); h.tick();
+  assert.deepEqual(h.changes, [1, 0]); assert.equal(h.timers.size, 1);
+});
+test('manual selection remains available while paused and rejects invalid indices', () => {
+  const h = setup(); h.rotation.setPaused(true); h.rotation.select(1);
+  h.rotation.select(-1); h.rotation.select(2); h.rotation.select(NaN);
+  assert.deepEqual(h.changes, [1]); assert.equal(h.timers.size, 0);
+});

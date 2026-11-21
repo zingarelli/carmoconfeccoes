@@ -98,8 +98,8 @@ Composições: Batizado com vestido e tercinho; Primeira Comunhão com camisa br
 
 ## Alternância suave da hero
 
-A hero alterna entre a composição rosa e a azul a cada **9 segundos**, com dissolução de **1,8 segundo**. Texto e CTA ficam fixos. Ambas têm artes próprias para desktop e mobile, com alturas estáveis. O botão “Pausar animação” permite interromper ou retomar as trocas.
+A hero alterna entre a composição rosa e a azul a cada **9 segundos**, com dissolução de **1,8 segundo**. Texto e CTA ficam fixos. Ambas têm artes próprias para desktop e mobile, com alturas estáveis. Os controles discretos no centro inferior da seção têm duas bolinhas para selecionar as imagens e um terceiro botão circular com ícone de pausa/reprodução. A imagem ativa é indicada pelo preenchimento da bolinha; os botões têm área de toque de 44 px e rótulos acessíveis.
 
-O controlador só começa depois que as imagens carregam, para evitar quadros vazios. A aba oculta suspende o temporizador, e uma pausa manual é preservada ao retornar. Com `prefers-reduced-motion: reduce`, a hero permanece estática e o controle é ocultado. Sem JavaScript, a primeira composição continua visível.
+O controlador só começa depois que as imagens carregam, para evitar quadros vazios. A aba oculta suspende o temporizador, e uma pausa manual é preservada ao retornar. Com `prefers-reduced-motion: reduce`, a hero permanece estática e o botão de pausa é ocultado; a seleção manual das imagens continua disponível. Sem JavaScript, a primeira composição continua visível.
 
 Para exportar a versão azul, o script aceita também `--hero-menino` (1980 × 792) e `--hero-menino-mobile` (1448 × 1086). Para testar o controlador, execute `node --test tests/hero.test.mjs`.

@@ -18,6 +18,12 @@ export function createHeroRotation({ count, onChange, interval = 9000, schedule 
   }
   refresh();
   return {
+    select(nextIndex) {
+      if (!Number.isInteger(nextIndex) || nextIndex < 0 || nextIndex >= count) return;
+      index = nextIndex;
+      onChange(index);
+      refresh();
+    },
     setPaused(value) { userPaused = value; refresh(); },
     setBlocked(reason, value) { value ? blockers.add(reason) : blockers.delete(reason); refresh(); },
     get userPaused() { return userPaused; },
@@ -30,6 +36,8 @@ async function initHero() {
   if (!root) return;
   const slides = [...root.querySelectorAll('[data-hero-slide]')];
   const button = root.querySelector('[data-hero-toggle]');
+  const controls = root.querySelector('[data-hero-controls]');
+  const dots = [...root.querySelectorAll('[data-hero-select]')];
   if (slides.length < 2 || !button) return;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const setActive = index => {
@@ -38,6 +46,7 @@ async function initHero() {
       slide.setAttribute('aria-hidden', String(i !== index));
     });
     root.dataset.theme = index === 0 ? 'pink' : 'blue';
+    dots.forEach((dot, i) => i === index ? dot.setAttribute('aria-current', 'true') : dot.removeAttribute('aria-current'));
   };
   try {
     // Never fade out the fallback until the alternative image can actually render.
@@ -48,16 +57,22 @@ async function initHero() {
   const syncMotion = () => {
     rotation.setBlocked('reduced-motion', motion.matches);
     button.hidden = motion.matches;
-    if (motion.matches) setActive(0);
+    if (motion.matches) rotation.select(0);
   };
+  if (controls) controls.hidden = false;
   syncVisibility();
   syncMotion();
+  dots.forEach(dot => dot.addEventListener('click', () => {
+    rotation.select(Number(dot.dataset.heroSelect));
+  }));
   document.addEventListener('visibilitychange', syncVisibility);
   motion.addEventListener('change', syncMotion);
   button.addEventListener('click', () => {
     rotation.setPaused(!rotation.userPaused);
     button.setAttribute('aria-pressed', String(rotation.userPaused));
-    button.textContent = rotation.userPaused ? 'Reproduzir animação' : 'Pausar animação';
+    button.title = rotation.userPaused ? 'Reproduzir animação' : 'Pausar animação';
+    button.querySelector('.hero-pause-icon').hidden = rotation.userPaused;
+    button.querySelector('.hero-play-icon').hidden = !rotation.userPaused;
   });
 }
 
