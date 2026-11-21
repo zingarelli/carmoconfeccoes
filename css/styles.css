@@ -84,21 +84,10 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
   .container { width: min(1120px, calc(100% - 64px)); }
   .brand { width: 205px; }
   .header-contact { display: inline-flex; }
-  .hero-inner { display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; }
-  .hero-copy { padding: 40px 0 46px; }
+  .hero-copy { padding: 40px 32px 32px; }
   h1 { font-size: clamp(2.3rem, 4.1vw, 3.75rem); }
   .hero-copy p { font-size: 1.1rem; padding-right: 18px; }
   .hero-copy .button { width: auto; }
-  /* Blend the desktop photo into the hero background, preserving its full composition. */
-  .hero-image {
-    height: auto;
-    aspect-ratio: 3 / 2;
-    border-radius: 0;
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 92%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 88%, transparent);
-    -webkit-mask-composite: source-in;
-    mask-image: linear-gradient(to right, transparent, #000 12%, #000 92%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 88%, transparent);
-    mask-composite: intersect;
-  }
   .page-sections { gap: 36px; padding-block: 46px 58px; }
   .collection-grid { gap: 24px; }
   .collection-card { border-radius: 22px; }
@@ -117,9 +106,16 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
 }
 @media (min-width: 960px) {
   .site-header { padding-block: 22px; }
-  .hero-inner { gap: 28px; }
-  .hero-image { height: auto; }
-  .hero-copy { padding-block: 55px; }
+  /* One continuous photographic backdrop; the copy sits above the quiet left side. */
+  .hero { isolation: isolate; overflow: hidden; }
+  .hero::after { z-index: 2; }
+  .hero-inner { position: static; width: min(1120px, calc(100% - 64px)); min-height: max(380px, 40vw); display: flex; align-items: center; }
+  .hero-copy { position: relative; z-index: 1; width: 55%; padding: 58px 0 72px; }
+  .hero-copy h1 { font-size: clamp(2.3rem, 4.1vw, 3.75rem); }
+  .hero-copy p { max-width: 440px; }
+  .hero-picture { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; }
+  .hero-picture::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #fff0f4 0%, rgb(255 240 244 / 85%) 20%, rgb(255 240 244 / 0%) 60%); pointer-events: none; }
+  .hero-image { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center; border-radius: 0; }
   .collection-grid { width: min(960px, 100%); margin-inline: auto; }
   .footer-inner { grid-template-columns: 205px 1fr 1fr; }
   .footer-contact { grid-column: auto; grid-template-columns: 1fr; justify-self: end; }

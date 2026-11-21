@@ -43,7 +43,7 @@ Abra `http://localhost:8000`. Use um servidor HTTP para testar o cache do Instag
 - Rosa e azul, logo com os três Cs na diagonal e contato pelo WhatsApp.
 - SEO local, dados estruturados `ClothingStore`, metadados sociais, canonical, sitemap e robots.
 - O domínio canônico foi mantido como `https://carmoconfeccoes.com.br/`. Confirme o host preferido na publicação e redirecione a variante com/sem `www` para ele.
-- As quatro imagens em `imagens/vitrine/` são composições individuais aprovadas, em **1536 × 1024 px (3:2)**, com variantes WebP de **480 e 960 px**. A grade preserva a mesma proporção em todas as telas, sem cortar as roupas. A hero usa `<picture>` com composições próprias: desktop em 1536 × 1024 e mobile em 1448 × 1086 (4:3), com a planta, os sapatinhos e o vestido visíveis. `srcset` e `sizes` permitem selecionar a resolução adequada. A foto de convite ao Instagram continua ilustrativa até a ativação do cache.
+- As quatro imagens em `imagens/vitrine/` são composições individuais aprovadas, em **1536 × 1024 px (3:2)**, com variantes WebP de **480 e 960 px**. A grade preserva a mesma proporção em todas as telas, sem cortar as roupas. A hero usa `<picture>` com composições próprias: desktop panorâmica em 1980 × 792 (5:2) e mobile em 1448 × 1086 (4:3), com a planta, os sapatinhos e o vestido visíveis. `srcset` e `sizes` permitem selecionar a resolução adequada. A foto de convite ao Instagram continua ilustrativa até a ativação do cache.
 - Fotos antigas e Swiper foram preservados no repositório, mas não são mais carregados pela página.
 
 ## Última publicação do Instagram
@@ -92,6 +92,6 @@ python3 scripts/prepare-images.py \
   --hero-mobile /caminho/hero-mobile.png
 ```
 
-As quatro artes das categorias e a hero desktop devem ter proporção 3:2 e pelo menos 1536 × 1024 px. A hero mobile deve ter proporção 4:3 e pelo menos 1448 × 1086 px. O script rejeita dimensões incompatíveis para evitar recortes acidentais.
+As quatro artes das categorias devem ter proporção 3:2 e pelo menos 1536 × 1024 px. A hero desktop deve ser panorâmica, em 1980 × 792 px (5:2), com a metade esquerda livre para o texto. No desktop (a partir de 960 px), ela ocupa o fundo inteiro da seção, com o texto sobreposto, sem painel nem máscara de bordas. A hero mobile deve ter proporção 4:3 e pelo menos 1448 × 1086 px. O script rejeita dimensões incompatíveis para evitar recortes acidentais.
 
 Composições: Batizado com vestido e tercinho; Primeira Comunhão com camisa branca e calça preta ao lado do vestido; Festas com vestido rosa e conjunto bege/gravata vinho; Times na ordem Corinthians, Palmeiras, São Paulo e Santos, conforme as fotos de produto aprovadas. Os detalhes muito pequenos dos escudos continuam sujeitos às limitações da imagem gerada.

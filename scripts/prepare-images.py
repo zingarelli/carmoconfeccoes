@@ -15,9 +15,9 @@ def export(source: Path, name: str, dimensions: tuple[int, int]) -> None:
         image = ImageOps.exif_transpose(original).convert('RGB')
         if image.width < dimensions[0] or image.height < dimensions[1]:
             raise ValueError(f'{name}: source must be at least {dimensions[0]} × {dimensions[1]} px')
-        if image.width * dimensions[1] != image.height * dimensions[0]:
+        if abs(image.width / image.height - dimensions[0] / dimensions[1]) > 0.005:
             raise ValueError(f'{name}: source must have aspect ratio {dimensions[0]}:{dimensions[1]}; no automatic cropping is performed')
-        for width in (480, 960, dimensions[0]):
+        for width in sorted({480, 960, *([1536] if name == 'hero' else []), dimensions[0]}):
             height = round(width * dimensions[1] / dimensions[0])
             resized = image.resize((width, height), Image.Resampling.LANCZOS)
             suffix = '' if width == dimensions[0] else f'-{width}'
@@ -34,7 +34,7 @@ def main() -> None:
     DESTINATION.mkdir(parents=True, exist_ok=True)
     for name, source in vars(args).items():
         name = name.replace('_', '-')
-        dimensions = (1448, 1086) if name == 'hero-mobile' else (1536, 1024)
+        dimensions = (1980, 792) if name == 'hero' else (1448, 1086) if name == 'hero-mobile' else (1536, 1024)
         export(source, name, dimensions)
         print(f'{name}: {dimensions[0]} × {dimensions[1]} + 480/960 px')
 
