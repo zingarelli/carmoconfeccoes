@@ -95,3 +95,11 @@ python3 scripts/prepare-images.py \
 As quatro artes das categorias devem ter proporção 3:2 e pelo menos 1536 × 1024 px. A hero desktop deve ser panorâmica, em 1980 × 792 px (5:2), com a metade esquerda livre para o texto. No desktop (a partir de 960 px), ela ocupa o fundo inteiro da seção, com o texto sobreposto, sem painel nem máscara de bordas. A hero mobile deve ter proporção 4:3 e pelo menos 1448 × 1086 px. O script rejeita dimensões incompatíveis para evitar recortes acidentais.
 
 Composições: Batizado com vestido e tercinho; Primeira Comunhão com camisa branca e calça preta ao lado do vestido; Festas com vestido rosa e conjunto bege/gravata vinho; Times na ordem Corinthians, Palmeiras, São Paulo e Santos, conforme as fotos de produto aprovadas. Os detalhes muito pequenos dos escudos continuam sujeitos às limitações da imagem gerada.
+
+## Alternância suave da hero
+
+A hero alterna entre a composição rosa e a azul a cada **9 segundos**, com dissolução de **1,8 segundo**. Texto e CTA ficam fixos. Ambas têm artes próprias para desktop e mobile, com alturas estáveis. O botão “Pausar animação” permite interromper ou retomar as trocas.
+
+O controlador só começa depois que as imagens carregam, para evitar quadros vazios. A aba oculta suspende o temporizador, e uma pausa manual é preservada ao retornar. Com `prefers-reduced-motion: reduce`, a hero permanece estática e o controle é ocultado. Sem JavaScript, a primeira composição continua visível.
+
+Para exportar a versão azul, o script aceita também `--hero-menino` (1980 × 792) e `--hero-menino-mobile` (1448 × 1086). Para testar o controlador, execute `node --test tests/hero.test.mjs`.

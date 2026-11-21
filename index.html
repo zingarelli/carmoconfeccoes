@@ -21,6 +21,7 @@
   <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/instagram.js" defer></script>
+  <script type="module" src="js/hero.mjs"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,7 +62,7 @@
   </header>
 
   <main id="conteudo">
-    <section class="hero" aria-labelledby="titulo">
+    <section class="hero" aria-labelledby="titulo" data-hero data-theme="pink">
       <div class="hero-inner container">
         <div class="hero-copy">
           <h1 id="titulo">Pequenos looks.<br>Grandes momentos.</h1>
@@ -69,11 +70,22 @@
           <a class="button" href="https://wa.me/5516997262401" target="_blank" rel="noopener noreferrer">
             <svg class="icon" aria-hidden="true"><use href="#whatsapp"/></svg>Fale pelo WhatsApp
           </a>
+          <button class="hero-toggle" type="button" data-hero-toggle aria-pressed="false" hidden>Pausar animação</button>
         </div>
+        <div class="hero-visual" data-hero-visual>
+          <div class="hero-slide hero-slide--pink" data-hero-slide data-active aria-hidden="false">
         <picture class="hero-picture">
           <source media="(max-width: 959px)" srcset="imagens/vitrine/hero-mobile-480.webp 480w, imagens/vitrine/hero-mobile-960.webp 960w, imagens/vitrine/hero-mobile.webp 1448w" sizes="100vw" width="1448" height="1086">
           <img class="hero-image" src="imagens/vitrine/hero.webp" srcset="imagens/vitrine/hero-480.webp 480w, imagens/vitrine/hero-960.webp 960w, imagens/vitrine/hero-1536.webp 1536w, imagens/vitrine/hero.webp 1980w" sizes="100vw" alt="Planta, sapatinhos e vestido infantil em uma composição sobre fundo rosa" width="1980" height="792" fetchpriority="high">
         </picture>
+          </div>
+          <div class="hero-slide hero-slide--blue" data-hero-slide aria-hidden="true">
+            <picture class="hero-picture">
+              <source media="(max-width: 959px)" srcset="imagens/vitrine/hero-menino-mobile-480.webp 480w, imagens/vitrine/hero-menino-mobile-960.webp 960w, imagens/vitrine/hero-menino-mobile.webp 1448w" sizes="100vw" width="1448" height="1086">
+              <img class="hero-image" src="imagens/vitrine/hero-menino.webp" srcset="imagens/vitrine/hero-menino-480.webp 480w, imagens/vitrine/hero-menino-960.webp 960w, imagens/vitrine/hero-menino-1536.webp 1536w, imagens/vitrine/hero-menino.webp 1980w" sizes="100vw" alt="Conjunto de tricô marfim com gorrinho e manta sobre fundo azul-claro" width="1980" height="792" decoding="async" fetchpriority="low">
+            </picture>
+          </div>
+        </div>
       </div>
     </section>
 
