@@ -40,14 +40,15 @@ address { font-style: normal; }
 h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
 .hero-copy p { margin-block: 16px 24px; max-width: 440px; font-size: 1rem; line-height: 1.5; }
 .hero-copy .button { width: 100%; }
-.hero-image { width: 100%; height: 240px; object-fit: cover; object-position: center 54%; }
+.hero-picture { display: block; width: 100%; align-self: center; }
+.hero-image { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
 .page-sections { display: grid; gap: 30px; padding-block: 38px 44px; }
 .section-heading { display: flex; align-items: center; justify-content: center; gap: 14px; text-align: center; margin-bottom: 24px; }
 .section-heading span { max-width: 25ch; }
 .section-heading::before, .section-heading::after { content: ""; height: 2px; width: 24px; background: var(--pink); flex: 0 0 auto; }
 .collection-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
 .collection-card { overflow: hidden; border-radius: 16px; background: var(--blush); display: flex; flex-direction: column; }
-.collection-card img { width: 100%; height: auto; aspect-ratio: 1.55; object-fit: contain; background: #dec6b0; }
+.collection-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: #dec6b0; }
 .collection-card figcaption { display: grid; place-content: center; text-align: center; font-size: clamp(.96rem, 3.8vw, 1.4rem); min-height: 58px; padding: 10px 6px; }
 .instagram-panel, .visit-panel { border-radius: var(--radius); padding: 18px; }
 .instagram-panel { background: linear-gradient(125deg, #eef7fd, #d9edf9); display: grid; grid-template-columns: minmax(90px, .8fr) minmax(0, 1.3fr); gap: 16px; align-items: center; }
@@ -88,11 +89,11 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
   h1 { font-size: clamp(2.3rem, 4.1vw, 3.75rem); }
   .hero-copy p { font-size: 1.1rem; padding-right: 18px; }
   .hero-copy .button { width: auto; }
-  .hero-image { height: 360px; border-radius: 48% 0 0 0; }
+  .hero-image { height: auto; aspect-ratio: 3 / 2; border-radius: 22px; }
   .page-sections { gap: 36px; padding-block: 46px 58px; }
   .collection-grid { gap: 24px; }
   .collection-card { border-radius: 22px; }
-  .collection-card img { aspect-ratio: 1.8; }
+  .collection-card img { aspect-ratio: 3 / 2; }
   .collection-card figcaption { min-height: 64px; font-size: 1.45rem; }
   .instagram-panel { padding: 26px 32px; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
   .instagram-image { aspect-ratio: 1.45; }
@@ -108,7 +109,7 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
 @media (min-width: 960px) {
   .site-header { padding-block: 22px; }
   .hero-inner { gap: 28px; }
-  .hero-image { height: 420px; }
+  .hero-image { height: auto; }
   .hero-copy { padding-block: 55px; }
   .collection-grid { width: min(960px, 100%); margin-inline: auto; }
   .footer-inner { grid-template-columns: 205px 1fr 1fr; }

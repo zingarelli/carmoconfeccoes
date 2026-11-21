@@ -43,7 +43,7 @@ Abra `http://localhost:8000`. Use um servidor HTTP para testar o cache do Instag
 - Rosa e azul, logo com os três Cs na diagonal e contato pelo WhatsApp.
 - SEO local, dados estruturados `ClothingStore`, metadados sociais, canonical, sitemap e robots.
 - O domínio canônico foi mantido como `https://carmoconfeccoes.com.br/`. Confirme o host preferido na publicação e redirecione a variante com/sem `www` para ele.
-- As imagens em `imagens/vitrine/` foram extraídas da proposta visual aprovada e otimizadas em WebP. São pequenas prévias; para maior nitidez em telas de alta densidade, substitua por exportações individuais de maior resolução mantendo a composição e os modelos aprovados.
+- As quatro imagens em `imagens/vitrine/` são composições individuais aprovadas, em **1536 × 1024 px (3:2)**, com variantes WebP de **480 e 960 px**. A grade preserva a mesma proporção em todas as telas, sem cortar as roupas. A hero usa `<picture>` com composições próprias: desktop em 1536 × 1024 e mobile em 1448 × 1086 (4:3), com a planta, os sapatinhos e o vestido visíveis. `srcset` e `sizes` permitem selecionar a resolução adequada. A foto de convite ao Instagram continua ilustrativa até a ativação do cache.
 - Fotos antigas e Swiper foram preservados no repositório, mas não são mais carregados pela página.
 
 ## Última publicação do Instagram
@@ -77,3 +77,21 @@ node --test tests/instagram.test.mjs
 ```
 
 Os testes verificam seleção por data, miniaturas, URLs, proteção do token e preservação do cache em caso de falha. Valide também o layout no navegador, inclusive a 320px e com zoom de 200%, antes de publicar.
+
+## Atualizar as imagens aprovadas
+
+O script opcional `scripts/prepare-images.py` converte as artes para WebP e gera as variantes, sem cortar ou ampliar fontes pequenas. Ele exige Pillow apenas na máquina de preparação. Nenhum processamento de imagens roda no servidor de produção.
+
+```sh
+python3 scripts/prepare-images.py \
+  --batizado /caminho/batizado.png \
+  --primeira-comunhao /caminho/primeira-comunhao.png \
+  --festas /caminho/festas.png \
+  --times /caminho/times.png \
+  --hero /caminho/hero-desktop.png \
+  --hero-mobile /caminho/hero-mobile.png
+```
+
+As quatro artes das categorias e a hero desktop devem ter proporção 3:2 e pelo menos 1536 × 1024 px. A hero mobile deve ter proporção 4:3 e pelo menos 1448 × 1086 px. O script rejeita dimensões incompatíveis para evitar recortes acidentais.
+
+Composições: Batizado com vestido e tercinho; Primeira Comunhão com camisa branca e calça preta ao lado do vestido; Festas com vestido rosa e conjunto bege/gravata vinho; Times na ordem Corinthians, Palmeiras, São Paulo e Santos, conforme as fotos de produto aprovadas. Os detalhes muito pequenos dos escudos continuam sujeitos às limitações da imagem gerada.
