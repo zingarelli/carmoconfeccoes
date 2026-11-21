@@ -39,7 +39,7 @@ python3 -m http.server 8000
 
 Abra `http://localhost:8000`. Use um servidor HTTP para testar o cache do Instagram; abrir o arquivo por `file://` não permite o `fetch`.
 
-- Grade 2 × 2 de Batizado, Primeira Comunhão, Festas e Times, sem links nos cards.
+- Um card por linha no celular (abaixo de 640 px) e grade 2 × 2 nas telas maiores, com Batizado, Primeira Comunhão, Festas e Times, sem links nos cards.
 - Rosa e azul, logo com os três Cs na diagonal e contato pelo WhatsApp.
 - SEO local, dados estruturados `ClothingStore`, metadados sociais, canonical, sitemap e robots.
 - O domínio canônico foi mantido como `https://carmoconfeccoes.com.br/`. Confirme o host preferido na publicação e redirecione a variante com/sem `www` para ele.

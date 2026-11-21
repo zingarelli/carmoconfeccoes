@@ -63,7 +63,7 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
 .section-heading { display: flex; align-items: center; justify-content: center; gap: 14px; text-align: center; margin-bottom: 24px; }
 .section-heading span { max-width: 25ch; }
 .section-heading::before, .section-heading::after { content: ""; height: 2px; width: 24px; background: var(--pink); flex: 0 0 auto; }
-.collection-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+.collection-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 .collection-card { overflow: hidden; border-radius: 16px; background: var(--blush); display: flex; flex-direction: column; }
 .collection-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: #dec6b0; }
 .collection-card figcaption { display: grid; place-content: center; text-align: center; font-size: clamp(.96rem, 3.8vw, 1.4rem); min-height: 58px; padding: 10px 6px; }
@@ -106,7 +106,7 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
   .hero-copy p { font-size: 1.1rem; padding-right: 18px; }
   .hero-copy .button { width: auto; }
   .page-sections { gap: 36px; padding-block: 46px 58px; }
-  .collection-grid { gap: 24px; }
+  .collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
   .collection-card { border-radius: 22px; }
   .collection-card img { aspect-ratio: 3 / 2; }
   .collection-card figcaption { min-height: 64px; font-size: 1.45rem; }
