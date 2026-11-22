@@ -1,4 +1,4 @@
-# Carmo Calçados Confecções
+# Carmo Calçados e Confecções
 
 Site da loja de moda infantil em Araraquara/SP.
 
