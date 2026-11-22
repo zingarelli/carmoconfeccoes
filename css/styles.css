@@ -32,7 +32,7 @@ address { font-style: normal; }
 .brand { width: 240px; height: auto; }
 .header-contact { display: none; }
 
-.hero { isolation: isolate; position: relative; background: linear-gradient(110deg, #fff0f4, #f9e3e9); padding-bottom: 18px; }
+.hero { touch-action: pan-y pinch-zoom; isolation: isolate; position: relative; background: linear-gradient(110deg, #fff0f4, #f9e3e9); padding-bottom: 18px; }
 .hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(110deg, #edf7fd, #dcecf8); opacity: 0; transition: opacity 1.8s ease-in-out; pointer-events: none; }
 .hero[data-theme="blue"]::before { opacity: 1; }
 .hero-visual { display: grid; width: 100%; position: relative; z-index: 0; }
