@@ -30,6 +30,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('batizado', 'primeira-comunhao', 'festas', 'times', 'hero', 'hero-mobile'):
         parser.add_argument(f'--{name}', type=Path, required=True)
+    parser.add_argument('--saida-maternidade', type=Path)
+    parser.add_argument('--acessorios', type=Path)
     parser.add_argument('--hero-menino', type=Path)
     parser.add_argument('--hero-menino-mobile', type=Path)
     args = parser.parse_args()
