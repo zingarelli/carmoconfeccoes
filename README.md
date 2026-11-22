@@ -56,3 +56,11 @@ Na hero, deslize horizontalmente para avançar ou voltar. Gestos verticais mant�
 ## Página 404
 
 Para conferir o visual localmente, abra `/404.html`. O servidor simples do Python retorna seu próprio erro para caminhos inexistentes. Em produção, configure a hospedagem para servir este arquivo com status 404; no GitHub Pages ele é reconhecido automaticamente na raiz.
+
+## Créditos
+
+Projeto de **Matheus Ricardo Uihara Zingarelli**, criado para divulgar a loja de sua mãe.
+
+Esta versão foi reformulada em colaboração com o **ChatGPT (OpenAI), usando o Codex** para implementar o site. A IA participou das propostas de layout, da criação e edição das composições visuais, da implementação em HTML/CSS/JavaScript, dos ajustes de SEO, dos testes automatizados e da documentação.
+
+Matheus definiu os requisitos, forneceu as referências e fotos dos produtos, dirigiu as decisões de design, testou o site e aprovou o resultado. As imagens das categorias e da hero são composições produzidas com auxílio de IA a partir das referências fornecidas.
