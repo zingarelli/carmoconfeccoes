@@ -1,5 +1,5 @@
 /** Small timer controller; no catch-up jumps when the tab becomes visible again. */
-export function createHeroRotation({ count, onChange, interval = 9000, schedule = setTimeout, cancel = clearTimeout }) {
+export function createHeroRotation({ count, onChange, interval = 6000, schedule = setTimeout, cancel = clearTimeout }) {
   let index = 0;
   let timer = null;
   let userPaused = false;
@@ -31,6 +31,24 @@ export function createHeroRotation({ count, onChange, interval = 9000, schedule 
   };
 }
 
+/** Horizontal touch/pen gestures; vertical scrolling and controls stay native. */
+export function bindHeroSwipe(root, onSwipe) {
+  let start = null;
+  root.addEventListener('pointerdown', event => {
+    if (!event.isPrimary || event.pointerType === 'mouse' || event.target.closest('a, button')) return;
+    start = { id: event.pointerId, x: event.clientX, y: event.clientY };
+  });
+  root.addEventListener('pointerup', event => {
+    if (!start || event.pointerId !== start.id) return;
+    const dx = event.clientX - start.x;
+    const dy = event.clientY - start.y;
+    start = null;
+    if (Math.abs(dx) >= 60 && Math.abs(dx) > Math.abs(dy) * 1.5) onSwipe(dx < 0 ? 1 : -1);
+  });
+  root.addEventListener('pointercancel', () => { start = null; });
+  root.addEventListener('pointerleave', () => { start = null; });
+}
+
 async function initHero() {
   const root = document.querySelector('[data-hero]');
   if (!root) return;
@@ -40,7 +58,9 @@ async function initHero() {
   const dots = [...root.querySelectorAll('[data-hero-select]')];
   if (slides.length < 2 || !button) return;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let activeIndex = 0;
   const setActive = index => {
+    activeIndex = index;
     slides.forEach((slide, i) => {
       slide.toggleAttribute('data-active', i === index);
       slide.setAttribute('aria-hidden', String(i !== index));
@@ -53,6 +73,7 @@ async function initHero() {
     await Promise.all(slides.map(slide => slide.querySelector('img').decode()));
   } catch { return; }
   const rotation = createHeroRotation({ count: slides.length, onChange: setActive });
+  bindHeroSwipe(root, direction => rotation.select((activeIndex + direction + slides.length) % slides.length));
   const syncVisibility = () => rotation.setBlocked('hidden', document.hidden);
   const syncMotion = () => {
     rotation.setBlocked('reduced-motion', motion.matches);
