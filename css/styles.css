@@ -120,6 +120,7 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
   .mobile-contact { display: none; }
 }
 @media (min-width: 960px) {
+  .instagram-copy p { max-width: 55ch; }
   .site-header { padding-block: 22px; }
   /* One continuous photographic backdrop; the copy sits above the quiet left side. */
   .hero { isolation: isolate; overflow: hidden; }
