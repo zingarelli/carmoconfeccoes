@@ -68,7 +68,7 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
 .collection-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: #dec6b0; }
 .collection-card figcaption { display: grid; place-content: center; text-align: center; font-size: clamp(.96rem, 3.8vw, 1.4rem); min-height: 58px; padding: 10px 6px; }
 .instagram-panel, .visit-panel { border-radius: var(--radius); padding: 18px; }
-.instagram-panel { display: block; width: 100%; min-width: 0; background: linear-gradient(125deg, #eef7fd, #d9edf9); text-align: center; }
+.instagram-panel { background: linear-gradient(125deg, #eef7fd, #d9edf9); text-align: center; }
 .instagram-copy h2 { font-size: clamp(1.35rem, 3.8vw, 1.9rem); }
 .instagram-copy p { margin: 12px auto 0; max-width: 48ch; font-size: .95rem; line-height: 1.5; overflow-wrap: anywhere; }
 .instagram-copy .instagram-handle { margin-top: 16px; font-weight: 700; color: var(--navy); }
