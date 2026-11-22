@@ -68,16 +68,14 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
 .collection-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: #dec6b0; }
 .collection-card figcaption { display: grid; place-content: center; text-align: center; font-size: clamp(.96rem, 3.8vw, 1.4rem); min-height: 58px; padding: 10px 6px; }
 .instagram-panel, .visit-panel { border-radius: var(--radius); padding: 18px; }
-.instagram-panel { background: linear-gradient(125deg, #eef7fd, #d9edf9); display: grid; grid-template-columns: minmax(90px, .8fr) minmax(0, 1.3fr); gap: 16px; align-items: center; }
-.instagram-image { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; }
-.instagram-copy h2 { font-size: clamp(1.1rem, 3.8vw, 1.9rem); }
-.instagram-copy p:not(.eyebrow) { margin-top: 10px; font-size: .9rem; line-height: 1.45; white-space: pre-line; overflow-wrap: anywhere; }
-.eyebrow { color: var(--muted); font-size: .73rem; letter-spacing: .025em; margin-bottom: 6px; overflow-wrap: anywhere; }
+.instagram-panel { background: linear-gradient(125deg, #eef7fd, #d9edf9); text-align: center; }
+.instagram-copy h2 { font-size: clamp(1.35rem, 3.8vw, 1.9rem); }
+.instagram-copy p { margin: 12px auto 0; max-width: 48ch; font-size: .95rem; line-height: 1.5; overflow-wrap: anywhere; }
+.instagram-copy .instagram-handle { margin-top: 16px; font-weight: 700; color: var(--navy); }
 .text-link { display: inline-flex; align-items: center; gap: 6px; color: var(--pink-dark); text-decoration: none; font-weight: 700; font-size: .9rem; min-height: 44px; margin-top: 6px; }
 .text-link:hover { text-decoration: underline; }
 .text-link .icon { width: 18px; height: 18px; }
 .text-link .arrow { width: 14px; }
-.post-date { display: block; margin-top: 8px; color: var(--muted); font-size: .8rem; }
 .visit-panel { background: linear-gradient(120deg, #fce8ef, #fff4f7); display: grid; gap: 22px; }
 .visit-copy h2 { margin-bottom: 18px; }
 .address-line { display: flex; gap: 10px; align-items: center; font-size: .96rem; line-height: 1.5; }
@@ -112,10 +110,8 @@ h1 { font-size: clamp(2rem, 7.8vw, 3.75rem); }
   .collection-card { border-radius: 22px; }
   .collection-card img { aspect-ratio: 3 / 2; }
   .collection-card figcaption { min-height: 64px; font-size: 1.45rem; }
-  .instagram-panel { padding: 26px 32px; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
-  .instagram-image { aspect-ratio: 1.45; }
-  .instagram-copy p:not(.eyebrow) { font-size: 1rem; }
-  .eyebrow { font-size: .8rem; }
+  .instagram-panel { padding: 32px; }
+  .instagram-copy p { font-size: 1rem; }
   .text-link { font-size: 1rem; }
   .visit-panel { padding: 28px 32px; grid-template-columns: 1fr 1fr; align-items: center; gap: 32px; }
   .store-map { height: 220px; }
