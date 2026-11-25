@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createHeroRotation, bindHeroSwipe } from '../js/hero.mjs';
+import { createHeroRotation, bindHeroSwipe } from '../js/hero.js';
 
 function setup(count = 2) {
   let next = 0;
