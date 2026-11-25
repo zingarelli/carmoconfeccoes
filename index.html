@@ -1,124 +1,175 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Matheus Ricardo Uihara Zingarelli">
-    <meta name="description"
-        content="Carmo Calçados Confecções é uma loja de venda de moda infantil localizada em Araraquara/SP. Especializada em roupas e calçados para batizados, festas e ocasiões especiais.">
-    <meta name="keywords"
-        content="roupa, batizado, festa, infantil, moda, vestido, times, desenhos, confeccao, confeccoes, araraquara">
-    <meta name="google-site-verification" content="G8aIl7Utv3upRC_CtIi6M6D7V_2zvQY9_7Cc2C10NI0" />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Carmo Calçados e Confecções</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff1f5">
+  <meta name="author" content="Matheus Ricardo Uihara Zingarelli">
+  <title>Moda infantil em Araraquara | Carmo Calçados e Confecções</title>
+  <meta name="description" content="Roupas e calçados infantis para batizado, primeira comunhão, festas e pequenos torcedores. Conheça a Carmo Calçados e Confecções, no Centro de Araraquara, e fale pelo WhatsApp.">
+  <meta name="google-site-verification" content="G8aIl7Utv3upRC_CtIi6M6D7V_2zvQY9_7Cc2C10NI0">
+  <link rel="canonical" href="https://carmoconfeccoes.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Carmo Calçados e Confecções">
+  <meta property="og:title" content="Pequenos looks. Grandes momentos. | Carmo Calçados e Confecções">
+  <meta property="og:description" content="Moda infantil em Araraquara: batizado, primeira comunhão, festas e times. Encontre um look para cada momento da infância.">
+  <meta property="og:url" content="https://carmoconfeccoes.com.br/">
+  <meta property="og:image" content="https://carmoconfeccoes.com.br/imagens/vitrine/hero.jpg">
+  <meta property="og:image:alt" content="Vestido e calçados infantis em tons claros">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/hero.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "@id": "https://carmoconfeccoes.com.br/#loja",
+    "name": "Carmo Calçados e Confecções",
+    "url": "https://carmoconfeccoes.com.br/",
+    "image": "https://carmoconfeccoes.com.br/imagens/vitrine/hero.jpg",
+    "logo": "https://carmoconfeccoes.com.br/imagens/logo-carmo-cursivo.webp",
+    "description": "Loja de moda infantil em Araraquara, com roupas e calçados para batizado, primeira comunhão, festas e times.",
+    "telephone": "+55-16-3332-2922",
+    "email": "contato@carmoconfeccoes.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Gonçalves Dias, 373 - Centro",
+      "addressLocality": "Araraquara",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://www.instagram.com/carmo.confeccoes/"]
+  }
+  </script>
 </head>
-
 <body>
-    <header>
-        <h1 class="header__logo"><img class="header__image" src="imagens/logo.svg" alt="Carmo Confecções"></h1>
-        <div class="header__contato">
-            <span class="contato__item">
-                <a href="tel:+551633322922" class="contato__link">
-                    <img class="contato__icone" src="imagens/telefone.png" alt="telefone">
-                    (16) 3332-2922
-                </a>
-            </span>
-            <span class="contato__item">
-                <a href="https://wa.me/5516997262401" target="_blank" class="contato__link">
-                    <img class="contato__icone" src="imagens/whatsapp.png" alt="abre o whatsapp em uma nova janela">
-                    (16) 99726-2401
-                </a>
-            </span>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.8A8.5 8.5 0 1 1 20.5 11.6Z"/><path d="M8 7.5c-.8 1.2.2 3.4 1.8 5s3.8 2.6 5 1.8l1-1.2-2.4-1.2-.8.7a8 8 0 0 1-2.5-2.5l.7-.8L9.6 7Z"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  </svg>
+
+  <header class="site-header container">
+    <img class="brand" src="imagens/logo-carmo-cursivo.webp" alt="Carmo Calçados e Confecções" width="960" height="630">
+    <a class="button header-contact" href="https://wa.me/5516997262401" target="_blank" rel="noopener noreferrer">
+      <svg class="icon" aria-hidden="true"><use href="#whatsapp"/></svg>Fale pelo WhatsApp
+    </a>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo" data-hero data-theme="pink">
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <h1 id="titulo">Pequenos looks.<br>Grandes momentos.</h1>
+          <p>Moda infantil em Araraquara, do batizado às descobertas do dia a dia.</p>
+          <a class="button" href="https://wa.me/5516997262401" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#whatsapp"/></svg>Fale pelo WhatsApp
+          </a>
         </div>
-    </header>
-    <main>
-        <article class="descricao">
-            <h2>Moda infantil</h2>
-            <p>Roupas e calçados para batizados e festas.</p>
-            <p>Vestidinhos e terninhos para ocasiões especiais.</p>
-            <p>Roupas infantis de times e desenhos.</p>
-        </article>
+        <div class="hero-visual" data-hero-visual>
+          <div class="hero-slide hero-slide--pink" data-hero-slide data-active aria-hidden="false">
+        <picture class="hero-picture">
+          <source media="(max-width: 959px)" srcset="imagens/vitrine/hero-mobile-480.webp 480w, imagens/vitrine/hero-mobile-960.webp 960w, imagens/vitrine/hero-mobile.webp 1448w" sizes="100vw" width="1448" height="1086">
+          <img class="hero-image" src="imagens/vitrine/hero.webp" srcset="imagens/vitrine/hero-480.webp 480w, imagens/vitrine/hero-960.webp 960w, imagens/vitrine/hero-1536.webp 1536w, imagens/vitrine/hero.webp 1980w" sizes="100vw" alt="Planta, sapatinhos e vestido infantil em uma composição sobre fundo rosa" width="1980" height="792" fetchpriority="high">
+        </picture>
+          </div>
+          <div class="hero-slide hero-slide--blue" data-hero-slide aria-hidden="true">
+            <picture class="hero-picture">
+              <source media="(max-width: 959px)" srcset="imagens/vitrine/hero-menino-mobile-480.webp 480w, imagens/vitrine/hero-menino-mobile-960.webp 960w, imagens/vitrine/hero-menino-mobile.webp 1448w" sizes="100vw" width="1448" height="1086">
+              <img class="hero-image" src="imagens/vitrine/hero-menino.webp" srcset="imagens/vitrine/hero-menino-480.webp 480w, imagens/vitrine/hero-menino-960.webp 960w, imagens/vitrine/hero-menino-1536.webp 1536w, imagens/vitrine/hero-menino.webp 1980w" sizes="100vw" alt="Conjunto de tricô marfim com gorrinho e manta sobre fundo azul-claro" width="1980" height="792" decoding="async" fetchpriority="low">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="hero-controls" role="group" aria-label="Controles das imagens de destaque" data-hero-controls hidden>
+        <button class="hero-control hero-dot" type="button" data-hero-select="0" aria-label="Mostrar imagem do vestido" aria-current="true"><span aria-hidden="true"></span></button>
+        <button class="hero-control hero-dot" type="button" data-hero-select="1" aria-label="Mostrar imagem do conjunto de tricô"><span aria-hidden="true"></span></button>
+        <button class="hero-control hero-toggle" type="button" data-hero-toggle aria-label="Pausar alternância automática" aria-pressed="false" title="Pausar animação">
+          <span class="hero-pause-icon" aria-hidden="true"></span>
+          <span class="hero-play-icon" aria-hidden="true" hidden></span>
+        </button>
+      </div>
+    </section>
 
-        <article class="fotos">
-            <h2>Veja alguns de nossos produtos</h2>
-            <p>Arraste para os lados ou toque nas setas para trocar de foto.</p>
-            <!-- Swipper -->
-            <!-- https://swiperjs.com -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- content dynamically filled by JS -->
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </article>
+    <div class="container page-sections">
+      <section class="collections" aria-labelledby="colecoes-titulo">
+        <h2 class="section-heading" id="colecoes-titulo"><span>Para cada momento da infância</span></h2>
+        <div class="collection-grid">
+          <figure class="collection-card">
+            <img src="imagens/vitrine/saida-maternidade.webp" srcset="imagens/vitrine/saida-maternidade-480.webp 480w, imagens/vitrine/saida-maternidade-960.webp 960w, imagens/vitrine/saida-maternidade.webp 1536w" sizes="(min-width: 1024px) 468px, (min-width: 640px) calc((100vw - 88px) / 2), calc(100vw - 36px)" alt="Conjuntos de tricô vinho e azul com mantas para saída de maternidade" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Saída de Maternidade</figcaption>
+          </figure>
+          <figure class="collection-card">
+            <img src="imagens/vitrine/batizado.webp" srcset="imagens/vitrine/batizado-480.webp 480w, imagens/vitrine/batizado-960.webp 960w, imagens/vitrine/batizado.webp 1536w" sizes="(min-width: 1024px) 468px, (min-width: 640px) calc((100vw - 88px) / 2), calc(100vw - 36px)" alt="Vestido branco de batizado com laços e tercinho de pérolas" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Batizado</figcaption>
+          </figure>
+          <figure class="collection-card">
+            <img src="imagens/vitrine/primeira-comunhao.webp" srcset="imagens/vitrine/primeira-comunhao-480.webp 480w, imagens/vitrine/primeira-comunhao-960.webp 960w, imagens/vitrine/primeira-comunhao.webp 1536w" sizes="(min-width: 1024px) 468px, (min-width: 640px) calc((100vw - 88px) / 2), calc(100vw - 36px)" alt="Camisa branca de manga curta, calça preta e vestido branco para primeira comunhão em cabides" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Primeira Comunhão</figcaption>
+          </figure>
+          <figure class="collection-card">
+            <img src="imagens/vitrine/festas.webp" srcset="imagens/vitrine/festas-480.webp 480w, imagens/vitrine/festas-960.webp 960w, imagens/vitrine/festas.webp 1536w" sizes="(min-width: 1024px) 468px, (min-width: 640px) calc((100vw - 88px) / 2), calc(100vw - 36px)" alt="Vestido rosa com flores e borboletas e conjunto bege com gravata vinho para festas, em cabides" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Festas</figcaption>
+          </figure>
+          <figure class="collection-card">
+            <img src="imagens/vitrine/times.webp" srcset="imagens/vitrine/times-480.webp 480w, imagens/vitrine/times-960.webp 960w, imagens/vitrine/times.webp 1536w" sizes="(min-width: 1024px) 468px, (min-width: 640px) calc((100vw - 88px) / 2), calc(100vw - 36px)" alt="Bodies infantis de Corinthians, Palmeiras, São Paulo e Santos, nessa ordem, em cabides" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Times</figcaption>
+          </figure>
+          <figure class="collection-card">
+            <img src="imagens/vitrine/acessorios.webp" srcset="imagens/vitrine/acessorios-480.webp 480w, imagens/vitrine/acessorios-960.webp 960w, imagens/vitrine/acessorios.webp 1536w" sizes="(min-width: 1024px) 468px, (min-width: 640px) calc((100vw - 88px) / 2), calc(100vw - 36px)" alt="Body branco bordado, tiara com laço, toalhinha de batizado e kit amarelo de naninha e sapatinhos" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Acessórios</figcaption>
+          </figure>
+        </div>
+      </section>
 
-        <article class="local">
-            <h2>Venha nos visitar</h2>
-            <p>Rua Gonçalves Dias, 373 - Araraquara</p>
-            <p>(Rua 1, esquina com a Duque de Caxias)</p>
-            <p>Você pode ver nossa localização no mapa.</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.6836573538017!2d-48.176022985389885!3d-21.792501004536483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f3e5c415bfe7%3A0x74aeda33dbf14c42!2zQ2FybW8gQ2Fsw6dhZG9zIENvbmZlY8Onw7Vlcw!5e0!3m2!1spt-BR!2sus!4v1667581120248!5m2!1spt-BR!2sus"
-                class="local__mapa" style="border:0;" loading="lazy"></iframe>
-        </article>
-    </main>
-    <footer>
-        <p>Carmo Calçados e Confecções</p>
-        <p>Rua Gonçalves Dias, 373 - Centro - Araraquara/SP</p>
-        <p class="contato__item">
-            <a href="tel:+551633322922" class="contato__link">
-                <img class="contato__icone" src="imagens/telefone.png" alt="telefone">
-                (16) 3332-2922
-            </a>
-        </p>
-        <p class="contato__item">
-            <a href="https://wa.me/5516997262401" target="_blank" class="contato__link">
-                <img class="contato__icone" src="imagens/whatsapp.png" alt="abre o whatsapp em uma nova janela">
-                (16) 99726-2401
-            </a>
-        </p>
-        <p class="contato__item">
-            <a href="mailto:contato@carmoconfeccoes.com.br" class="contato__link">
-                <img class="contato__icone" src="imagens/mail.png" alt="e-mail">
-                contato@carmoconfeccoes.com.br
-            </a>
-        </p>
-    </footer>
-    <!-- Initialize Swiper -->
-    <script src="swiper/swiper-bundle.min.js"></script>
-    <script>
-        (() => {
-            const swiper = new Swiper('.mySwiper', {
-                effect: 'fade',
-                grabCursor: true,
-                rewind: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    type: 'bullets'
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                a11y: {
-                    prevSlideMessage: 'ver foto anterior',
-                    nextSlideMessage: 'ir para a próxima foto'
-                }
-            });
-    
-            const MAX = 20;
-            for (let i = 1; i <= MAX; i++) {
-                swiper.appendSlide(`<div class="swiper-slide"><img src="imagens/fotos/${i}.png" alt="fotos dos produtos da loja Carmo Confecções"></div>`);
-            }            
-        })()
-    </script>
+      <section class="instagram-panel" aria-labelledby="instagram-titulo">
+        <div class="instagram-copy">
+          <h2 id="instagram-titulo">Tem novidade e muito carinho por lá!</h2>
+          <p>Acompanhe os looks, as novidades e os detalhes da nossa loja.</p>
+          <p class="instagram-handle">@carmo.confeccoes</p>
+          <a class="text-link" href="https://www.instagram.com/carmo.confeccoes/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#instagram"/></svg><span>Visite nosso Instagram</span><svg class="icon arrow" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="visit-panel" aria-labelledby="visita-titulo">
+        <div class="visit-copy">
+          <h2 id="visita-titulo">Esperamos sua visita</h2>
+          <div class="address-line">
+            <svg class="icon pin" aria-hidden="true"><use href="#pin"/></svg>
+            <address>Rua Gonçalves Dias, 373 · Centro<br>Araraquara/SP</address>
+          </div>
+          <p class="address-note">Rua 1, esquina com a Duque de Caxias.</p>
+          <a class="button button-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Goncalves+Dias+373+Centro+Araraquara+SP" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#pin"/></svg>Como chegar
+          </a>
+        </div>
+        <iframe class="store-map" title="Localização da Carmo Calçados e Confecções em Araraquara" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.6836573538017!2d-48.176022985389885!3d-21.792501004536483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f3e5c415bfe7%3A0x74aeda33dbf14c42!2zQ2FybW8gQ2Fsw6dhZG9zIENvbmZlY8Onw7Vlcw!5e0!3m2!1spt-BR!2sus!4v1667581120248!5m2!1spt-BR!2sus" width="600" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img class="brand footer-brand" src="imagens/logo-carmo-cursivo.webp" alt="Carmo Calçados e Confecções" width="960" height="630" loading="lazy">
+      <address>Rua Gonçalves Dias, 373 · Centro<br>Araraquara/SP</address>
+      <div class="footer-contact">
+        <a href="tel:+551633322922">(16) 3332-2922</a>
+        <a href="https://wa.me/5516997262401" target="_blank" rel="noopener noreferrer">WhatsApp: (16) 99726-2401</a>
+        <a href="mailto:contato@carmoconfeccoes.com.br">contato@carmoconfeccoes.com.br</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-contact">
+    <a class="button" href="https://wa.me/5516997262401" target="_blank" rel="noopener noreferrer">
+      <svg class="icon" aria-hidden="true"><use href="#whatsapp"/></svg>Conversar no WhatsApp
+    </a>
+  </div>
 </body>
-
 </html>
